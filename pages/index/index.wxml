@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+  
+  <search></search>
+  <view>
+    <!-- swiper标签存在默认宽高
+    100% * 150px
+    image图片也存在默认宽高
+    320px*240px
+    设计图和轮播图的比较
+    原宽/原高=100vw/轮播图高度 -->
+
+     <swiper class="" autoplay="{{true}}" circular='true' indicator-dots>
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+      <navigator class="" target="" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+          <image class="lunbotu_image" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      </navigator>         
+      </swiper-item>
+  </swiper> 
+  </view>
+  <view class="cart" hover-class="none" hover-stop-propagation="false">
+      <navigator url="/pages/category/index" open-type="switchTab" wx:for="{{cartList}}" wx:key="name" class="cartList" >     
+         <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+           
+      </navigator>
+  </view>
+
+  <view class="home" hover-class="none" hover-stop-propagation="false">
+    
+     <view class="homeList" wx:for="{{homeList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title" hover-class="none" hover-stop-propagation="false">
+        <view class="floor-title" hover-class="none" >
+            
+         <image class="" src="{{item1.floor_title.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+           
+         </image>  
+        </view>
+      <view class="floorgroup">
+          <navigator  class="" wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="*this" hover-class="none" hover-stop-propagation="false">
+          <!-- mode="{{index2===0?'widthFix':'scaleToFill'}}" -->
+           <image  class="" src="{{item2.image_src}}"  lazy-load="false" binderror="" bindload="">
+             
+           </image>
+        </navigator>
+      </view>
+     </view>
+  </view>
+    
+</view>

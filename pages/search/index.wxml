@@ -1,0 +1,14 @@
+<view class="search_row">
+    
+    <input value="{{inpValue}}" bindinput="changeInput" placeholder="请输入您要搜索的商品" type="text" name="" id=""/>
+    <button  bindtap="iptClose" hidden="{{!isFouse}}">取消</button>
+</view>
+<view class="search_content">
+    <view class="search_item" wx:for="{{searchList}}" wx:key="goods_id">
+  <navigator class="" target="" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+        {{item.goods_name}}
+  </navigator>
+    
+    </view>
+</view>
+  

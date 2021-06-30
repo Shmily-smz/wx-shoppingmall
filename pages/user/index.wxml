@@ -1,0 +1,71 @@
+<view class="user_info_wrap">
+    <view wx:if="{{userInfo.nickName}}" class="user_img_wrap">
+        <image class="user_bg" src="{{userInfo.avatarUrl}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userInfo.avatarUrl}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="user_name" hover-class="none" hover-stop-propagation="false">
+                {{userInfo.nickName}}
+            </view>
+        </view>
+    </view>
+    <view wx:else class="user_btn" hover-class="none" hover-stop-propagation="false">
+        <navigator class="" target="" url="/pages/login/index" hover-class="navigator-hover" open-type="navigate">
+            登陆
+        </navigator>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <view class="history_wrap">
+            <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                <view class="his_num">0</view>
+                <view class="his_name">收藏的店铺</view>
+            </navigator>
+            <navigator class="" target="" url="/pages/collect/index" hover-class="navigator-hover" open-type="navigate">
+                <view class="his_num">{{collectList.length}}</view>
+                <view class="his_name">收藏的商品</view>
+            </navigator>
+            <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                <view class="his_num">0</view>
+                <view class="his_name">关注的商品</view>
+            </navigator>
+            <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                <view class="his_num">0</view>
+                <view class="his_name">我的足迹</view>
+            </navigator>
+        </view>
+        <view class="order_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="order_title">我的订单</view>
+            <view class="order_content">
+                <navigator class="" target="" url="/pages/order/index?type=1" hover-class="navigator-hover" open-type="navigate">
+                    <view class="iconfont icon-ding_dan" hover-class="none" hover-stop-propagation="false"></view>
+                    <view class="" hover-class="none" hover-stop-propagation="false">全部订单</view>
+                </navigator>
+                <navigator class="" target="" url="/pages/order/index?type=2" hover-class="navigator-hover" open-type="navigate">
+                    <view class="iconfont icon-fukuantongzhi" hover-class="none" hover-stop-propagation="false"></view>
+                    <view class="" hover-class="none" hover-stop-propagation="false">待付款</view>
+                </navigator>
+                <navigator class="" target="" url="/pages/order/index?type=3" hover-class="navigator-hover" open-type="navigate">
+                    <view class="iconfont icon-receipt-address" hover-class="none" hover-stop-propagation="false"></view>
+                    <view class="order_name" hover-class="none" hover-stop-propagation="false">
+                        待收货
+                    </view>
+                </navigator>
+                <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                    <view class="iconfont icon-tuihuotuikuan_dianpu" hover-class="none" hover-stop-propagation="false"></view>
+                    <view class="" hover-class="none" hover-stop-propagation="false">退货/退款</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="adress_wrap">收货地址管理</view>
+<view class="app_info_wrap">
+    <view class="app_info_item app_info_contact">
+        <view>联系客服</view>
+        <view>400-1924-40008</view>
+    </view>
+    <navigator url="/pages/feedback/index" class="app_info_item" hover-class="none" hover-stop-propagation="false">意见反馈</navigator>
+    <view class="app_info_item" hover-class="none" hover-stop-propagation="false">关于我们</view>
+</view>
+<view class="recommend_wrap"></view>

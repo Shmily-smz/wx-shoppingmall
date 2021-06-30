@@ -1,0 +1,3 @@
+<view class="" hover-class="none" hover-stop-propagation="false">
+     <button style="margin-top:20rpx;" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" plain>获取授权</button>
+</view>

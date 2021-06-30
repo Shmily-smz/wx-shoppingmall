@@ -1,0 +1,45 @@
+swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+swiper .lunbotu_image {
+  width: 100%;
+}
+.cart {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}     
+.cart .cartList {
+  flex: 1;
+  padding: 20rpx;
+}
+.cart .cartList image {
+  width: 100%;
+}
+.home .homeList .floor-title {
+  padding: 10rpx 0;
+}
+.home .homeList .floor-title image {
+  width: 100%;
+}
+.home .homeList .floorgroup {
+  overflow: hidden;
+  height: 100%;
+}
+.home .homeList .floorgroup navigator {
+  float: left;
+  width: 33.33%;
+}
+.home .homeList .floorgroup navigator:nth-last-child(-n+4) image {
+  height: 27.72711207vw;
+  border-left: 10rpx solid #fff;
+}
+.home .homeList .floorgroup navigator:nth-child(1) image {
+  height: 424rpx;
+}
+.home .homeList .floorgroup navigator image {
+  width: 100%;
+  height: 100%;
+}

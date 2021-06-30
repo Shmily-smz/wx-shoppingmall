@@ -1,0 +1,127 @@
+page{
+    background-color: #edece8;
+}
+.user_info_wrap{
+    height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  border-top: 1px solid #ccc;
+    .user_img_wrap{
+        position: relative;
+        .user_bg{
+            height: 45vh !important;
+            filter: blur(10rpx);
+            width: 100%;
+            transform: scale(1.1);
+            
+        }
+        .user_info{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top:20%;
+            text-align: center;
+            image{
+              width: 150rpx;
+              height: 150rpx;
+              border-radius: 50%;
+            }
+            .user_name{
+                color: #fff;
+                padding-top: 40rpx;
+            }
+        }
+    }
+    .user_btn{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        border: 1px solid black;
+        font-size: 38rpx;
+        padding: 30rpx;
+        top:30%;
+        color: var(--themeColor);
+        border-radius: 10rpx;
+        background-color: white;
+    }
+}
+.user_content{
+    position: relative;
+    .user_main{
+      position: absolute;
+      width: 90%;
+      left: 50%;
+      transform: translate(-50%);
+      top:-40rpx;
+      color: #666;
+      padding-bottom: 100rpx;
+      .history_wrap{
+          display: flex;
+          background-color: #fff;
+        
+          navigator{
+              flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+             padding: 20rpx 0;
+            
+              .his_num{
+                color: var(--themeColor);
+              }
+              .his_name{
+              text-align: center;
+              }
+          }
+      }
+    }
+    .order_wrap{
+        background-color: #fff;
+        margin-top: 30rpx;
+        font-size: 25rpx;
+      .order_title{
+        padding: 20rpx;
+        border-bottom: 1px solid #ccc;
+      }
+      .order_content{
+          display: flex;
+          flex-wrap: nowrap;
+         navigator{
+           flex: 1;
+         text-align: center;
+
+             padding: 15rpx 0;
+            
+             .iconfont{
+               color: var(--themeColor);
+               padding-bottom: 10rpx;
+             }
+             
+         } 
+      }
+      
+    }
+   
+}
+.adress_wrap{
+    margin-top: 310rpx;
+    background-color: #fff;
+    padding: 20rpx;
+  }
+  .app_info_wrap{
+      margin-top: 30rpx;
+      background-color: #fff;
+      .app_info_item{
+           padding: 20rpx;
+           border-bottom: 1px solid #ccc;
+      }
+  }
+  .app_info_contact{
+      display: flex;
+      justify-content: space-between;
+      padding: 20rpx;
+  }
+  .recommend_wrap{
+
+  }

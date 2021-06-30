@@ -1,0 +1,28 @@
+<view class="cates" hover-class="none" hover-stop-propagation="false">
+<!-- 搜索框 -->
+<search></search>
+  <view class="cates_container">
+     <!-- 左侧菜单 -->
+       <scroll-view scroll-y="{{true}}" class="leftList">
+          <view bind:tap="clickLeftlist" data-index="{{index}}"  class="leftContent,{{index==currentIndex ? 'active':''}}" wx:for="{{leftList}}" wx:key="*this"  hover-class="none" hover-stop-propagation="false">
+              {{item}}
+          </view>       
+       </scroll-view>
+     <!-- 右侧菜单 -->
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="{{true}}" class="rightList">
+         <view wx:for="{{rightList}}" wx:key="cart_id" class="rightContent" hover-class="none" hover-stop-propagation="false">
+            <view class="goods_title">
+                 {{item.cat_name}}
+            </view>
+            <view class="goods_item" hover-class="none" hover-stop-propagation="false">
+                 <navigator url="/pages/goods_list/index?cid={{item2.cat_id}}" class="goods_nav" wx:for-item="item2" wx:for="{{item.children}}" wx:key="cat_id" hover-class="none">
+                <image class="" src="{{item2.cat_icon}}" mode="widthFix" lazy-load="false" binderror="" bindload="">   </image>               
+                <text class="" selectable="false" space="false" decode="false">
+                    {{item2.cat_name}}
+                </text>                               
+            </navigator>
+            </view>
+         </view>
+     </scroll-view>
+  </view>
+</view>

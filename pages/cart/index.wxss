@@ -1,0 +1,100 @@
+page {
+  padding-bottom: 90rpx;
+}
+.adress {
+  display: flex;
+  border-bottom: 5rpx solid var(--themeColor);
+}
+.adress .user_info {
+  padding: 20rpx;
+  flex-direction: column;
+  flex: 6;
+}
+.adress .userPhone {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20rpx;
+}
+.cart_content .cart_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  border-bottom: 1px solid var(--themeColor);
+  border-top: 1px solid var(--themeColor);
+  color: var(--themeColor);
+}
+.cart_content .cart_main .cart_item {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.cart_content .cart_main .cart_item .cart_img_wrap {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+.cart_content .cart_main .cart_item .cart_img_wrap image {
+  width: 80%;
+}
+.cart_content .cart_main .cart_item .cart_Info_wrap {
+  display: flex;
+  flex: 4;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.cart_content .cart_main .cart_item .cart_Info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart_content .cart_main .cart_item .cart_Info_wrap .goods_price_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cart_content .cart_main .cart_item .cart_Info_wrap .goods_price_row .goods_price {
+  font-size: 30rpx;
+  color: var(--themeColor);
+}
+.cart_content .cart_main .cart_item .cart_Info_wrap .goods_price_row .cart_num_tool {
+  display: flex;
+}
+.cart_content .cart_main .cart_item .cart_Info_wrap .goods_price_row .cart_num_tool .goods_num {
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bootom_tab {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  height: 90rpx;
+  display: flex;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.bootom_tab .totalnum {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 4;
+  font-size: 32rpx;
+  text-align: right;
+  padding-right: 20rpx;
+}
+.bootom_tab .totalnum .aa {
+  font-size: 20rpx;
+}
+.bootom_tab .subnum {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  font-weight: 600;
+}

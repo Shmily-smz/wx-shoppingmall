@@ -1,0 +1,46 @@
+page {
+  height: 100%;
+}
+.active {
+  color: var(--themeColor);
+  border-left: 3px solid var(--themeColor);
+}
+.cates {
+  height: 100%;
+}
+.cates .cates_container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.cates .cates_container .leftList {
+  flex: 2;
+  border: 1px solid black;
+}
+.cates .cates_container .leftList .leftContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75rpx;
+  font-size: 30rpx;
+}
+.cates .cates_container .rightList {
+  flex: 5;
+  border: 1px solid black;
+}
+.cates .cates_container .rightList .goods_title {
+  height: 80rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.cates .cates_container .rightList .goods_item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cates .cates_container .rightList .goods_nav {
+  width: 33.33%;
+  text-align: center;
+}
+.cates .cates_container .rightList .goods_nav image {
+  width: 60%;
+}

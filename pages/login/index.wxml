@@ -1,0 +1,4 @@
+<view class="" hover-class="none" hover-stop-propagation="false">
+<button style="margin-top:20rpx" type="primary" plain bindtap="getUserProfile">登陆</button>
+
+</view>

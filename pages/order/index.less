@@ -1,0 +1,56 @@
+.tabs {
+    display: flex;
+
+    .tabs-items {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 15rpx 0;
+        color: #666;
+
+    }
+
+    .active {
+        border-bottom: 1px solid var(--themeColor);
+    }
+}
+
+.order_main {
+    .order_item {
+        padding: 20rpx;
+        border-bottom: 1rpx solid #ccc;
+
+        .order_number {
+            display: flex;
+            justify-content: space-between;
+            padding: 10rpx;
+
+            .order_number_text {}
+
+            .order_numver_number {}
+        }
+
+        .order_price {
+            display: flex;
+            justify-content: space-between;
+            padding: 10rpx;
+
+            .order_price_text {}
+
+            .order_price_number {
+                color: var(--themeColor);
+            }
+        }
+
+        .order_time {
+            display: flex;
+            justify-content: space-between;
+            padding: 10rpx;
+
+            .order_time_text {}
+
+            .order_time_number {}
+        }
+    }
+}

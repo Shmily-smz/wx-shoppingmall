@@ -1,0 +1,72 @@
+<view class="" hover-class="none" hover-stop-propagation="false">
+     <view>
+    <!-- swiper标签存在默认宽高
+    100% * 150px
+    image图片也存在默认宽高
+    320px*240px
+    设计图和轮播图的比较
+    原宽/原高=100vw/轮播图高度 -->
+
+     <swiper autoplay="{{true}}" circular='true' indicator-dots>
+      <swiper-item bindtap="handleprevewImage" wx:for="{{swiperLists}}" wx:key="pics_id" data-url="{{item.pics_mid}}">
+      <!-- <navigator class="" target=""  hover-class="navigator-hover" open-type="navigate"> -->
+          <image class="lunbotu_image" src="{{item.pics_mid}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      <!-- </navigator>          -->
+      </swiper-item>
+  </swiper> 
+  </view>
+  <view class="goods_price" hover-class="none" hover-stop-propagation="false">
+      ￥{{goodsObj.goods_price}}
+  </view>
+  <view class="goods_name_row" hover-class="none" hover-stop-propagation="false">
+      <view class="goods_name" hover-class="none" hover-stop-propagation="false">
+          {{goodsObj.goods_name}}
+      </view>
+      <view bindtap="collect" class="goods_collect" hover-class="none" hover-stop-propagation="false">
+          <text  class="iconfont {{showIf?'icon-shoucang1':'icon-shoucang'}}"></text>
+         
+          <view class="collect_text" hover-class="none" hover-stop-propagation="false">
+              收藏
+          </view>
+      </view>
+  </view>
+
+  <view class="goods_info">
+      <view class="infoTitle">
+          图文详情
+      </view>
+      <view class="infoContent">
+          <rich-text class="" nodes="{{goodsObj.goods_introduce}}"></rich-text>
+      </view>
+  </view>
+  <view class="bottom-tap">
+      <view class="tab-item">
+          <view class="iconfont icon-kefu"></view>
+          <view class="" hover-class="none" hover-stop-propagation="false">
+              客服
+          </view>
+          <button open-type="contact" ></button>
+      </view>
+      <view class="tab-item">
+          <view class="iconfont icon-yixianshi-"></view>
+          <view>
+             分享
+          </view>
+             <button open-type="share" ></button>
+            
+      </view>
+      <navigator url="/pages/cart/index" class="tab-item" open-type="switchTab" >
+          <view class="iconfont icon-gouwuche"></view>
+          <view class="" hover-class="none" hover-stop-propagation="false">
+              购物车
+          </view>
+      </navigator>
+      <view class="tab-item btn_cart flexon" bindtap="addCart">
+         加入购物车
+      </view>
+      <view class="tab-item btn_buy flexon">
+         立即购买
+      </view>
+
+  </view>
+</view>
